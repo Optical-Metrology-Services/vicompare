@@ -1,6 +1,7 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="13008000">
+<Project Type="Project" LVVersion="18008000">
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Property Name="NI.Project.Description" Type="Str"></Property>
 	<Property Name="SMProvider.SMVersion" Type="Int">201310</Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="IOScan.Faults" Type="Str"></Property>
@@ -65,6 +66,7 @@
 				<Item Name="launch tcp vi handler.vi" Type="VI" URL="../executables/launch tcp vi handler.vi"/>
 				<Item Name="launch vi server handler.vi" Type="VI" URL="../executables/launch vi server handler.vi"/>
 				<Item Name="parse argument.vi" Type="VI" URL="../executables/parse argument.vi"/>
+				<Item Name="Select LabVIEW Version.vi" Type="VI" URL="../Select LabVIEW Version.vi"/>
 				<Item Name="set exit code.vi" Type="VI" URL="../executables/set exit code.vi"/>
 				<Item Name="try to reach vi server.vi" Type="VI" URL="../executables/try to reach vi server.vi"/>
 			</Item>
@@ -88,7 +90,7 @@
 				<Item Name="eventvkey.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventvkey.ctl"/>
 				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
 				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
-				<Item Name="General Error Handler CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler CORE.vi"/>
+				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
 				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
 				<Item Name="Get File Extension.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Get File Extension.vi"/>
 				<Item Name="Get String Text Bounds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Get String Text Bounds.vi"/>
@@ -99,6 +101,7 @@
 				<Item Name="Internecine Avoider.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/Internecine Avoider.vi"/>
 				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
+				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
 				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
@@ -129,7 +132,6 @@
 				<Property Name="App_INI_GUID" Type="Str">{4B21EE6C-D809-45C1-9CE1-B8EAADE24C17}</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
 				<Property Name="App_waitDebugging" Type="Bool">true</Property>
-				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{1C97A170-E896-4D64-BCEC-1C469633F8B1}</Property>
 				<Property Name="Bld_buildSpecName" Type="Str">1_diffmain</Property>
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
@@ -140,7 +142,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{6A1A3BC4-E768-46CA-9BC1-B40E13B618D8}</Property>
-				<Property Name="Bld_version.build" Type="Int">39</Property>
+				<Property Name="Bld_version.build" Type="Int">40</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">vidiff.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/executables/vidiff.exe</Property>
@@ -150,7 +152,7 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/executables/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_cmdLineArgs" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{664C3503-407F-410E-8316-CD80D7B2F022}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{767A7EBA-56C4-48A1-A25F-555840DACBB0}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/exe/launcher/cmdmain.vi</Property>
@@ -165,13 +167,14 @@
 				<Property Name="Source[3].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[3].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">4</Property>
-				<Property Name="TgtF_companyName" Type="Str">NISE</Property>
+				<Property Name="TgtF_companyName" Type="Str">OMS</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">1_diffmain</Property>
 				<Property Name="TgtF_internalName" Type="Str">1_diffmain</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2014 DS</Property>
 				<Property Name="TgtF_productName" Type="Str">1_diffmain</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{0F18D1F2-C69C-4BEF-9BEC-C590F3FEF679}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">vidiff.exe</Property>
+				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 			<Item Name="2_mergemain" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
@@ -179,7 +182,6 @@
 				<Property Name="App_INI_GUID" Type="Str">{07D39AED-8490-4AE9-98E6-631B4784267E}</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
 				<Property Name="App_waitDebugging" Type="Bool">true</Property>
-				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{4E4E32B5-35A6-4617-8CEC-C7A091DD15DB}</Property>
 				<Property Name="Bld_buildSpecName" Type="Str">2_mergemain</Property>
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
@@ -190,7 +192,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D192B5B7-9516-4C6D-A7AB-DEF74155B7A9}</Property>
-				<Property Name="Bld_version.build" Type="Int">38</Property>
+				<Property Name="Bld_version.build" Type="Int">39</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">vimerge.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/executables/vimerge.exe</Property>
@@ -200,7 +202,7 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/executables/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_cmdLineArgs" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{664C3503-407F-410E-8316-CD80D7B2F022}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{767A7EBA-56C4-48A1-A25F-555840DACBB0}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/exe/launcher/cmdmain.vi</Property>
@@ -215,30 +217,30 @@
 				<Property Name="Source[3].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[3].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">4</Property>
-				<Property Name="TgtF_companyName" Type="Str">DS</Property>
+				<Property Name="TgtF_companyName" Type="Str">OMS</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">lvlauncher</Property>
 				<Property Name="TgtF_internalName" Type="Str">lvlauncher</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2014 DS</Property>
 				<Property Name="TgtF_productName" Type="Str">lvlauncher</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{47D2DF4F-2D44-4EBD-9867-67FE3871F75E}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">vimerge.exe</Property>
+				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 			<Item Name="3_actions" Type="Source Distribution">
-				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{BEF7666B-82D6-4ACB-9E05-5CDB20F57837}</Property>
 				<Property Name="Bld_buildSpecName" Type="Str">3_actions</Property>
 				<Property Name="Bld_excludeTypedefs" Type="Bool">true</Property>
 				<Property Name="Bld_localDestDir" Type="Path">../builds/actions</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{9F8CF89D-0309-451C-984B-2F9584944109}</Property>
-				<Property Name="Bld_version.build" Type="Int">36</Property>
+				<Property Name="Bld_version.build" Type="Int">37</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/actions</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../builds/actions/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{FEBDC48A-D241-4856-9746-F194020F5155}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{767A7EBA-56C4-48A1-A25F-555840DACBB0}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/diffmergetool/action/performaction.vi</Property>
@@ -269,30 +271,29 @@
 				<Property Name="Destination[0].tag" Type="Str">{B240C314-BA66-4A38-9EB4-7F94B297EE40}</Property>
 				<Property Name="Destination[0].type" Type="Str">userFolder</Property>
 				<Property Name="Destination[1].name" Type="Str">National Instruments</Property>
-				<Property Name="Destination[1].parent" Type="Str">{3912416A-D2E5-411B-AFEE-B63654D690C0}</Property>
-				<Property Name="Destination[1].tag" Type="Str">{3ED2CAA5-8C1C-406B-957A-4D6AC21B188C}</Property>
+				<Property Name="Destination[1].parent" Type="Str">{115F5F59-DED6-42E2-8467-4CD042208C47}</Property>
+				<Property Name="Destination[1].tag" Type="Str">{FB134D05-A3F5-46BE-BAF0-8C87055BBFA5}</Property>
 				<Property Name="Destination[1].type" Type="Str">userFolder</Property>
 				<Property Name="Destination[2].name" Type="Str">Shared</Property>
-				<Property Name="Destination[2].parent" Type="Str">{3ED2CAA5-8C1C-406B-957A-4D6AC21B188C}</Property>
-				<Property Name="Destination[2].tag" Type="Str">{7476D715-B632-4EE4-9089-BBE0AE477847}</Property>
+				<Property Name="Destination[2].parent" Type="Str">{FB134D05-A3F5-46BE-BAF0-8C87055BBFA5}</Property>
+				<Property Name="Destination[2].tag" Type="Str">{2352360E-929F-41FA-9F84-0565610B3708}</Property>
 				<Property Name="Destination[2].type" Type="Str">userFolder</Property>
 				<Property Name="Destination[3].name" Type="Str">viscc</Property>
-				<Property Name="Destination[3].parent" Type="Str">{7476D715-B632-4EE4-9089-BBE0AE477847}</Property>
-				<Property Name="Destination[3].tag" Type="Str">{6BEBA1AC-E5EE-4D19-A24C-73199CD27B9B}</Property>
+				<Property Name="Destination[3].parent" Type="Str">{2352360E-929F-41FA-9F84-0565610B3708}</Property>
+				<Property Name="Destination[3].tag" Type="Str">{824E246E-1391-46A0-89A0-6D7C9F7B5429}</Property>
 				<Property Name="Destination[3].type" Type="Str">userFolder</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="INST_author" Type="Str">DS</Property>
-				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
 				<Property Name="INST_buildLocation" Type="Path">../builds/installer</Property>
 				<Property Name="INST_buildLocation.type" Type="Str">relativeToCommon</Property>
 				<Property Name="INST_buildSpecName" Type="Str">4_installer</Property>
 				<Property Name="INST_defaultDir" Type="Str">{B240C314-BA66-4A38-9EB4-7F94B297EE40}</Property>
+				<Property Name="INST_installerName" Type="Str">setup.exe</Property>
 				<Property Name="INST_productName" Type="Str">vi scc tools</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.39</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.0</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
-				<Property Name="InstSpecVersion" Type="Str">13018017</Property>
-				<Property Name="MSI_arpCompany" Type="Str">DS</Property>
-				<Property Name="MSI_arpURL" Type="Str">http://www.ds.com/</Property>
+				<Property Name="InstSpecVersion" Type="Str">18018011</Property>
+				<Property Name="MSI_arpCompany" Type="Str">OMS</Property>
 				<Property Name="MSI_distID" Type="Str">{23031F3B-0B7B-4549-955B-A1145590B353}</Property>
 				<Property Name="MSI_osCheck" Type="Int">0</Property>
 				<Property Name="MSI_upgradeCode" Type="Str">{AE7F98A5-2E6D-4A14-A511-370B1D31C078}</Property>
@@ -300,41 +301,38 @@
 				<Property Name="RegDest[0].dirTag" Type="Str">{DDFAFC8B-E728-4AC8-96DE-B920EBB97A86}</Property>
 				<Property Name="RegDest[0].parentTag" Type="Str">2</Property>
 				<Property Name="RegDestCount" Type="Int">1</Property>
-				<Property Name="Source[0].dest" Type="Str">{6BEBA1AC-E5EE-4D19-A24C-73199CD27B9B}</Property>
-				<Property Name="Source[0].File[0].dest" Type="Str">{6BEBA1AC-E5EE-4D19-A24C-73199CD27B9B}</Property>
-				<Property Name="Source[0].File[0].name" Type="Str">performaction.vi</Property>
+				<Property Name="Source[0].dest" Type="Str">{B240C314-BA66-4A38-9EB4-7F94B297EE40}</Property>
+				<Property Name="Source[0].File[0].dest" Type="Str">{B240C314-BA66-4A38-9EB4-7F94B297EE40}</Property>
+				<Property Name="Source[0].File[0].name" Type="Str">vidiff.exe</Property>
 				<Property Name="Source[0].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
 				<Property Name="Source[0].File[0].Shortcut[0].name" Type="Str">ldm</Property>
 				<Property Name="Source[0].File[0].Shortcut[0].subDir" Type="Str">sourcetools</Property>
-				<Property Name="Source[0].File[0].tag" Type="Ref">/My Computer/diffmergetool/action/performaction.vi</Property>
+				<Property Name="Source[0].File[0].ShortcutCount" Type="Int">1</Property>
+				<Property Name="Source[0].File[0].tag" Type="Str">{0F18D1F2-C69C-4BEF-9BEC-C590F3FEF679}</Property>
 				<Property Name="Source[0].FileCount" Type="Int">1</Property>
-				<Property Name="Source[0].name" Type="Str">3_actions</Property>
-				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/3_actions</Property>
-				<Property Name="Source[0].type" Type="Str">SDIST</Property>
+				<Property Name="Source[0].name" Type="Str">1_diffmain</Property>
+				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/1_diffmain</Property>
+				<Property Name="Source[0].type" Type="Str">EXE</Property>
 				<Property Name="Source[1].dest" Type="Str">{B240C314-BA66-4A38-9EB4-7F94B297EE40}</Property>
 				<Property Name="Source[1].File[0].dest" Type="Str">{B240C314-BA66-4A38-9EB4-7F94B297EE40}</Property>
-				<Property Name="Source[1].File[0].name" Type="Str">vidiff.exe</Property>
+				<Property Name="Source[1].File[0].name" Type="Str">vimerge.exe</Property>
 				<Property Name="Source[1].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
-				<Property Name="Source[1].File[0].Shortcut[0].name" Type="Str">ldm</Property>
-				<Property Name="Source[1].File[0].Shortcut[0].subDir" Type="Str">sourcetools</Property>
+				<Property Name="Source[1].File[0].Shortcut[0].name" Type="Str">vimerge</Property>
+				<Property Name="Source[1].File[0].Shortcut[0].subDir" Type="Str">lvlauncher</Property>
 				<Property Name="Source[1].File[0].ShortcutCount" Type="Int">1</Property>
-				<Property Name="Source[1].File[0].tag" Type="Str">{0F18D1F2-C69C-4BEF-9BEC-C590F3FEF679}</Property>
+				<Property Name="Source[1].File[0].tag" Type="Str">{47D2DF4F-2D44-4EBD-9867-67FE3871F75E}</Property>
 				<Property Name="Source[1].FileCount" Type="Int">1</Property>
-				<Property Name="Source[1].name" Type="Str">1_diffmain</Property>
-				<Property Name="Source[1].tag" Type="Ref">/My Computer/Build Specifications/1_diffmain</Property>
+				<Property Name="Source[1].name" Type="Str">2_mergemain</Property>
+				<Property Name="Source[1].tag" Type="Ref">/My Computer/Build Specifications/2_mergemain</Property>
 				<Property Name="Source[1].type" Type="Str">EXE</Property>
-				<Property Name="Source[2].dest" Type="Str">{B240C314-BA66-4A38-9EB4-7F94B297EE40}</Property>
-				<Property Name="Source[2].File[0].dest" Type="Str">{B240C314-BA66-4A38-9EB4-7F94B297EE40}</Property>
-				<Property Name="Source[2].File[0].name" Type="Str">vimerge.exe</Property>
-				<Property Name="Source[2].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
-				<Property Name="Source[2].File[0].Shortcut[0].name" Type="Str">vimerge</Property>
-				<Property Name="Source[2].File[0].Shortcut[0].subDir" Type="Str">lvlauncher</Property>
-				<Property Name="Source[2].File[0].ShortcutCount" Type="Int">1</Property>
-				<Property Name="Source[2].File[0].tag" Type="Str">{47D2DF4F-2D44-4EBD-9867-67FE3871F75E}</Property>
+				<Property Name="Source[2].dest" Type="Str">{824E246E-1391-46A0-89A0-6D7C9F7B5429}</Property>
+				<Property Name="Source[2].File[0].dest" Type="Str">{824E246E-1391-46A0-89A0-6D7C9F7B5429}</Property>
+				<Property Name="Source[2].File[0].name" Type="Str">performaction.vi</Property>
+				<Property Name="Source[2].File[0].tag" Type="Ref">/My Computer/diffmergetool/action/performaction.vi</Property>
 				<Property Name="Source[2].FileCount" Type="Int">1</Property>
-				<Property Name="Source[2].name" Type="Str">2_mergemain</Property>
-				<Property Name="Source[2].tag" Type="Ref">/My Computer/Build Specifications/2_mergemain</Property>
-				<Property Name="Source[2].type" Type="Str">EXE</Property>
+				<Property Name="Source[2].name" Type="Str">3_actions</Property>
+				<Property Name="Source[2].tag" Type="Ref">/My Computer/Build Specifications/3_actions</Property>
+				<Property Name="Source[2].type" Type="Str">SDIST</Property>
 				<Property Name="SourceCount" Type="Int">3</Property>
 			</Item>
 		</Item>
