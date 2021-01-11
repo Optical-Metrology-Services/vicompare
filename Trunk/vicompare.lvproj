@@ -48,6 +48,7 @@
 				<Item Name="fix all paths.vi" Type="VI" URL="../fix all paths.vi"/>
 				<Item Name="fix symbolic paths.vi" Type="VI" URL="../fix symbolic paths.vi"/>
 				<Item Name="not found message.vi" Type="VI" URL="../not found message.vi"/>
+				<Item Name="Relocate Files.vi" Type="VI" URL="../Relocate Files.vi"/>
 				<Item Name="swap slashes.vi" Type="VI" URL="../swap slashes.vi"/>
 			</Item>
 			<Item Name="servers" Type="Folder">
